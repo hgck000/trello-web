@@ -1,5 +1,6 @@
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles'
 import { deepOrange, orange, teal, cyan } from '@mui/material/colors'
+import { backdropClasses } from '@mui/material'
 
 
 // Create a theme instance.
@@ -23,6 +24,23 @@ const theme = extendTheme({
     }
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          '*::-webkit-scrollbar': {
+            width: '8px',
+            height: '8px'
+          },
+          '*::-webkit-scrollbar-thumb': {
+            backgroundColor: '#bdc3c7',
+            borderRadius: '8px'
+          },
+          '*::-webkit-scrollbar-thumb:hover': {
+            backgroundColor: '#00b894'
+          }
+        }
+      }
+    },
     MuiButton: {
       styleOverrides: {
         root: {
