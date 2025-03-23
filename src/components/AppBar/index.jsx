@@ -15,6 +15,7 @@ import Button from '@mui/material/Button'
 import Badge from '@mui/material/Badge'
 import TextField from '@mui/material/TextField'
 import Tooltip from '@mui/material/Tooltip'
+import LibraryAddIcon from '@mui/icons-material/LibraryAdd'
 
 function AppBar() {
   return (
@@ -39,7 +40,11 @@ function AppBar() {
           <Recent />
           <Starred />
           <Template />
-          <Button variant="outlined">Create</Button>
+          <Button
+            variant="outlined"
+            startIcon={<LibraryAddIcon />}>
+            Create
+          </Button>
         </Box>
       </Box>
 
