@@ -32,7 +32,7 @@ function Profiless() {
           aria-expanded={open ? 'true' : undefined}
         >
           <Avatar
-            sx={{ width: 34, height: 34 }}
+            sx={{ width: 36, height: 36 }}
             alt="QuangMinhCute"
             src="https://avatars.githubusercontent.com/u/126417436?v=4"
           />
