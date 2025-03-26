@@ -7,8 +7,8 @@ const theme = extendTheme({
     boardBarHeight: '60px'
   },
   colorSchemes: {
-    light: {},
-    dark: {}
+    // light: {},
+    // dark: {}
   },
   components: {
     MuiCssBaseline: {
