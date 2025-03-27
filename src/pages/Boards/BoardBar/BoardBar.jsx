@@ -36,8 +36,7 @@ function BoardBar() {
       gap: 2,
       padding: 2,
       overflowX: 'auto',
-      bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#34495e' : '#1976d2'),
-      borderBottom: '1px solid white'
+      bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#34495e' : '#1976d2')
     }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
         <Chip
@@ -93,7 +92,10 @@ function BoardBar() {
               width: 34,
               height: 34,
               fontSize: 16,
-              border: 'none'
+              border: 'none',
+              color: 'white',
+              cursor: 'pointer',
+              '&:fisrt-of-type': { bgcolor: '#a4b0be' }
             }
           }}
         >
