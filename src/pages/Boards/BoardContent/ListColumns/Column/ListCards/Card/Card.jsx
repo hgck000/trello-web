@@ -7,19 +7,33 @@ import CardMedia from '@mui/material/CardMedia'
 import GroupIcon from '@mui/icons-material/Group'
 import AttachmentIcon from '@mui/icons-material/Attachment'
 import CommentIcon from '@mui/icons-material/Comment'
+import { useSortable } from '@dnd-kit/sortable'
+import { CSS } from '@dnd-kit/utilities'
 
 function Card({ card }) {
-
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
+    id: card._id,
+    data: { ...card }
+  })
+  const dndKitCardStyle = {
+    touchAction: 'none',
+    transform: CSS.Translate.toString(transform),
+    transition,
+    opacity: isDragging ? 0.5 : undefined
+  }
   const shouldShowCardActions = () => {
     return !!card?.memberIds?.leng || !!card?.comments?.length || !!card?.attachments?.length
   }
 
   return (
-    <MuiCard sx={{
-      cursor: 'pointer',
-      boxShadow: '0 1px 1px rgba(0, 0, 0, 0.2)',
-      overflow: 'unset'
-    }}>
+    <MuiCard
+      ref={setNodeRef} style={dndKitCardStyle} {...attributes} {...listeners}
+      sx={{
+        cursor: 'pointer',
+        boxShadow: '0 1px 1px rgba(0, 0, 0, 0.2)',
+        overflow: 'unset'
+      }}
+    >
       {card?.cover && <CardMedia sx={{ height: 140 }} image={card?.cover} /> }
       <CardContent sx={{ p: 1.5, '&:last-child': { p: 1.5 } }}>
         <Typography>Vivo x200 Pro Mini</Typography>
