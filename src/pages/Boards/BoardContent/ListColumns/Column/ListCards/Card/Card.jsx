@@ -19,7 +19,8 @@ function Card({ card }) {
     touchAction: 'none',
     transform: CSS.Translate.toString(transform),
     transition,
-    opacity: isDragging ? 0.5 : undefined
+    opacity: isDragging ? 0.5 : undefined,
+    border: isDragging ? '1px solid #2ecc71' : undefined
   }
   const shouldShowCardActions = () => {
     return !!card?.memberIds?.leng || !!card?.comments?.length || !!card?.attachments?.length
@@ -36,7 +37,7 @@ function Card({ card }) {
     >
       {card?.cover && <CardMedia sx={{ height: 140 }} image={card?.cover} /> }
       <CardContent sx={{ p: 1.5, '&:last-child': { p: 1.5 } }}>
-        <Typography>Vivo x200 Pro Mini</Typography>
+        <Typography>{card?.title}</Typography>
       </CardContent>
       {shouldShowCardActions() &&
         <CardActions sx={{ p: '0 4px 8px 4px' }}>
