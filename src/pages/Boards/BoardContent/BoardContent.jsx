@@ -18,7 +18,7 @@ import {
   getFirstCollision
 } from '@dnd-kit/core'
 import { arrayMove } from '@dnd-kit/sortable'
-import { useCallback, useEffect, useState, useCallback, useRef } from 'react'
+import { useCallback, useEffect, useState, useRef } from 'react'
 import { cloneDeep } from 'lodash'
 
 import Column from './ListColumns/Column/Column'
@@ -251,6 +251,7 @@ function BoardContent({ board }) {
     }
 
     const pointerIntersections = pointerWithin(args)
+    // eslint-disable-next-line no-extra-boolean-cast
     const intersections = !!pointerIntersections?.length
       ? pointerIntersections
       : rectIntersection(args)
@@ -269,7 +270,7 @@ function BoardContent({ board }) {
         })[0]?.id
       }
       lastOverId.current = overId
-      return [{ id: overId}]
+      return [{ id: overId }]
     }
 
     // neu overId la null thi tra ve rong - tranh crash trang
