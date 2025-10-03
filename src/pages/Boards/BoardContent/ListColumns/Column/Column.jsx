@@ -53,10 +53,10 @@ function Column({ column }) {
 
   const addNewCard = () => {
     if (!newCardTitle) {
-      console.log('Column title is required')
+      // console.log('Column title is required')
       return
     }
-    console.log('Add new column: ', newCardTitle)
+    // console.log('Add new column: ', newCardTitle)
     // Gọi API ở đây
 
     // Đóng lại trạng thái thêm Column mới và Clear input
@@ -176,6 +176,7 @@ function Column({ column }) {
                 size="small"
                 variant="outlined"
                 autoFocus
+                data-no-dnd="true"
                 value={newCardTitle}
                 onChange={(e) => setNewCardTitle(e.target.value)}
                 sx={{
@@ -195,7 +196,9 @@ function Column({ column }) {
                   }
                 }}
               />
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <Box
+                sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
+                data-no-dnd="true">
                 <Button
                   onClick={addNewCard}
                   variant="contained" color="success" size="small"
@@ -218,7 +221,6 @@ function Column({ column }) {
             </Box>
           }
         </Box>
-
       </Box>
     </div>
   )

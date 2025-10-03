@@ -17,10 +17,10 @@ function ListColumns({ columns }) {
 
   const addNewColumn = () => {
     if (!newColumnTitle) {
-      console.log('Column title is required')
+      // console.log('Column title is required')
       return
     }
-    console.log('Add new column: ', newColumnTitle)
+    // console.log('Add new column: ', newColumnTitle)
     // Gọi API ở đây
 
     // Đóng lại trạng thái thêm Column mới và Clear input
