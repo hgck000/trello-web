@@ -1,4 +1,4 @@
-# Trello Web (Frontend)
+# Trello Web (React + Material UI)
 A Trello-like React + Material UI app with buttery drag-and-drop for columns & cards, dark/light mode, CRUD, and responsive design. Built with Vite and deploys to Vercel.
 
 ## Features
@@ -20,7 +20,9 @@ A Trello-like React + Material UI app with buttery drag-and-drop for columns & c
 
 Here’s a quick look at the UI:
 
-![Trello-web Demo](src/assets/demo.gif)
+![Trello-web Demo](src/assets/demo1.gif)
+
+![Trello-web Demo](src/assets/demo2.gif)
 
 ## Quick Start
 
